@@ -1,0 +1,80 @@
+body {
+  background: linear-gradient(to right, #74ebd5, #acb6e5);
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.quiz-card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.15);
+}
+
+#options button {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #f1f1f1;
+  transition: all 0.3s;
+  font-weight: 500;
+}
+
+#options button:hover {
+  background-color: #d6eaff;
+  transform: scale(1.05);
+}
+
+#options button:active {
+  transform: scale(0.98);
+}
+
+.correct {
+  background-color: #c8f7c5 !important;
+}
+
+.wrong {
+  background-color: #f7c5c5 !important;
+}
+
+.progress-bar {
+  transition: width 0.3s ease;
+}
+
+#timer {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+#timer.text-danger {
+  color: #dc3545;
+}
+
+#options button:focus {
+  outline: 3px solid #007bff;
+  outline-offset: 3px;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+/* Responsive Styling */
+@media (max-width: 576px) {
+  .quiz-card {
+    padding: 15px;
+  }
+
+  #question {
+    font-size: 1.2rem;
+  }
+
+  #options button {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .quiz-card {
+    max-width: 600px;
+  }
+}
